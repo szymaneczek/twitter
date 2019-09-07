@@ -1,7 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <footer class="container">
-    <p>&copy; Company 2017-2018</p>
+    <p>&copy; SDA Twitter 2019</p>
 </footer>
 
 <!-- Bootstrap core JavaScript
