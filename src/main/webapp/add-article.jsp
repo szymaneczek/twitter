@@ -18,7 +18,6 @@
                 </div>
                 <div class="form-group">
                     <div class="form-group"></div>
-                    <label for="content">Tytuł</label>
                     <textarea class="form-control" id="content" rows="3"></textarea>
                 </div>
                 <hr class="md-4"/>
@@ -26,7 +25,8 @@
                 </form>
         </div>
     </div>
+
+    <jsp:include page="include/footer.jsp"/>
 </div>
-<jsp:include page="include/footer.jsp"/>
 </body>
 </html>
