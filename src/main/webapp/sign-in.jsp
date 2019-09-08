@@ -22,7 +22,7 @@
             <input type="checkbox" value="remember-me"> Remember me
         </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Logowanie</button>
+    <button id="loginButton" class="btn btn-lg btn-primary btn-block" type="submit">Logowanie</button>
 
 </form>
 </div>
