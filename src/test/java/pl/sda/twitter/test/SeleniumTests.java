@@ -23,7 +23,7 @@ public class SeleniumTests {
         if (os.contains("windows")) {
             System.setProperty("webdriver.gecko.driver", "src/test/geckodriver.exe");
         } else {
-            System.setProperty("webdriver.gecko.driver", "src/test/geckodriver");
+            System.setProperty("webdriver.gecko.driver", "src/test/geckodriver.exe");
         }
         driver = new FirefoxDriver();
         baseUrl = "https://www.katalon.com/";
@@ -32,7 +32,7 @@ public class SeleniumTests {
 
     @Test
     public void testUntitledTestCase() {
-        driver.get("http://localhost:8081/index.jsp");
+        driver.get("http://localhost:8081/twitter/index.jsp");
         driver.findElement(By.linkText("Zaloguj się")).click();
         driver.findElement(By.id("inputLogin")).clear();
         driver.findElement(By.id("inputLogin")).sendKeys("admin");
