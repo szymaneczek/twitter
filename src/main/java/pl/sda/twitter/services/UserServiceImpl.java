@@ -1,11 +1,11 @@
 package pl.sda.twitter.services;
 
-import pl.sda.twitter.model.User;
+import pl.sda.twitter.model.TbUser;
 
 public class UserServiceImpl implements UserService{
     @Override
-    public User getUserByUserName(String username) {
+    public TbUser getUserByUserName(String username) {
 
-        return new User((long) 1,"admin", "password");
+        return new TbUser((long) 1,"admin", "password");
     }
 }

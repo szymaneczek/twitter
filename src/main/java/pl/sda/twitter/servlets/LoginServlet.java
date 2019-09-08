@@ -1,6 +1,6 @@
 package pl.sda.twitter.servlets;
 
-import pl.sda.twitter.model.User;
+import pl.sda.twitter.model.TbUser;
 import pl.sda.twitter.services.UserService;
 import pl.sda.twitter.services.UserServiceImpl;
 
@@ -27,13 +27,13 @@ public class LoginServlet extends HttpServlet {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
-        User user = userService.getUserByUserName(userName);
-        if (user == null || !user.getPassword().equals(password)) {
+        TbUser tbuser = userService.getUserByUserName(userName);
+        if (tbuser == null || !tbuser.getPassword().equals(password)) {
             //użytkownik nie istnieje lub password nie pasuje
             response.setCharacterEncoding(UTF_8.toString());
             response.sendRedirect("sign-in.jsp");
         } else {
-            session.setAttribute("user", user);
+            session.setAttribute("user", tbuser);
             // logowanie poprawne
             response.setCharacterEncoding(UTF_8.toString());
             response.sendRedirect("index.jsp");

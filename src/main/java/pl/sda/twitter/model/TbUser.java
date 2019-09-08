@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class User {
+public class TbUser {
     private Long id;
     private String userName;
     private String password;
