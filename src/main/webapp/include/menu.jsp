@@ -18,10 +18,10 @@
                 <% User user = (User) session.getAttribute("user"); %>
                 <c:choose>
                 <c:when test = "${sessionScope.user.getUserName()!=null}">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/logout.jsp">Wyloguj się</a>
+                    <a id="loginlink" class="nav-link" href="${pageContext.request.contextPath}/logout.jsp">Wyloguj się</a>
                 </c:when>
                     <c:otherwise>
-                <a class="nav-link" href="${pageContext.request.contextPath}/sign-in.jsp">Zaloguj się</a>
+                <a id="loginlink" class="nav-link" href="${pageContext.request.contextPath}/sign-in.jsp">Zaloguj się</a>
                 </c:otherwise>
                 </c:choose>
             </li>
