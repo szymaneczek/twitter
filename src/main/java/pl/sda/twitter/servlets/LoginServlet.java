@@ -36,6 +36,11 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", tbuser);
             // logowanie poprawne
             response.setCharacterEncoding(UTF_8.toString());
+            String currentPage = (String) session.getAttribute("currentPage");
+            if(currentPage !=null){
+                session.removeAttribute("currentPage");
+                response.sendRedirect(currentPage);
+            } else
             response.sendRedirect("index.jsp");
         }
     }
