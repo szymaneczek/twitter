@@ -11,13 +11,13 @@
     <div class="row text-center">
         <div class="col-md-8 m-auto text-left">
             <h4>Dodaj nowy wpis</h4>
-            <form class="needs-validator" novalidate="">
+            <form class="needs-validator" action="addArticle" method="post" novalidate="">
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="title" placeholder="Tytuł" required="">
+                    <input name= "title" type="text" class="form-control" id="title" placeholder="Tytuł" required="">
                 </div>
                 <div class="form-group">
                     <div class="form-group"></div>
-                    <textarea placeholder="Treść" class="form-control" id="content" rows="3"></textarea>
+                    <textarea name="content" placeholder="Treść" class="form-control" id="content" rows="3"></textarea>
                 </div>
                 <hr class="md-4"/>
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Wyślij</button>
