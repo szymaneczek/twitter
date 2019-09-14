@@ -1,5 +1,7 @@
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="articleService" scope="request" class="pl.sda.twitter.services.ArticleServiceImpl"/>
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,33 +23,19 @@
 
 <jsp:include page="include/menu.jsp"/>
 
-<main id="middle" class="container">
+<main id="middle" class="container mt-5 pt-5">
+    <%
+        List allArticles = articleService.getAllArticles();
+        pageContext.setAtribute("articles", allArticles);
+    %>
     <div class="jumbotron">
+        <c:forEach items="${articles}" var="article">
         <div class="container">
             <h1 class="display-3">Witaj na twitterze!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point
-                to
-                create something more unique.</p>
+            <p>${article.getContent()}</p>
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
         </div>
-    </div>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point
-                to
-                create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-        </div>
-    </div>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point
-                to
-                create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-        </div>
+        </c:forEach>
     </div>
 </main>
 

@@ -15,7 +15,7 @@ public class ArticleServiceImpl implements ArticleService {
         tbArticle.setUser(user);
         tbArticle.setContent(content);
         articleDao.addNewArticle(tbArticle);
-                
+
     }
 
     @Override
